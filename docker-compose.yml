@@ -41,6 +41,14 @@ services:
     networks:
       default_bridge:
         ipv4_address: 192.168.0.20
+  backend2:
+    container_name: letters_backend2
+    build: .
+    ports:
+      - "8080:8080"
+    networks:
+      default_bridge:
+        ipv4_address: 192.168.0.21
   nginx:
     container_name: letters_nginx
     build: ./nginx
