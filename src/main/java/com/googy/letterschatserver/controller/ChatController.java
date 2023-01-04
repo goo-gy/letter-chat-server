@@ -4,9 +4,11 @@ import com.googy.letterschatserver.domain.ChatDto;
 import com.googy.letterschatserver.kafka.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin
 public class ChatController {
     @Autowired
     private KafkaProducer producer;
